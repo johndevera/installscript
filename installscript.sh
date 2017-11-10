@@ -1,5 +1,7 @@
+###################### INSTALL ROS
 sudo sh rosscript.sh
 
+###################### INSTALL GRID_MAP PACKAGES
 sudo apt-get install ros-kinetic-octomap*
 
 #create the catkin workspace and src folder
@@ -36,14 +38,40 @@ catkin build grid_map --no-deps --verbose --catkin-make-args run_tests
 catkin build kindr --no-deps --verbose --catkin-make-args run_tests
 catkin build kindr_ros --no-deps --verbose --catkin-make-args run_tests
 
-#Install VIM
+###################### INSTALL HTOP
+sudo apt-get install htop
+
+###################### INSTALL VIM
 sudo apt-get install vim
 
-#Install Chrome
+###################### INSTALL Chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-
 sudo apt-get update 
 sudo apt-get install google-chrome-stable
-	
+
+##################### INSTALL SUBLIME
+
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt-get update
+sudo apt-get install sublime-text
+
+##################### INSTALL SPOTIFY
+##From website
+# 1. Add the Spotify repository signing keys to be able to verify downloaded packages
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0DF731E45CE24F27EEEB1450EFDC8610341D9410
+# 2. Add the Spotify repository
+echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+# 3. Update list of available packages
+sudo apt-get update
+# 4. Install Spotify
+sudo apt-get install spotify-client
+
+
+###################### CODE TO BE ADDED TO ~/.bashrc
+echo 'source ~/Dropbox/devel/setup.bash' >> ~/.bashrc
+echo 'export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:/home/asblab/Dropbox/src/jaguar_gazebo/worlds/models' >> ~/.bashrc
+
+
+
