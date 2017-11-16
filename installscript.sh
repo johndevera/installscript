@@ -1,5 +1,6 @@
 ###################### INSTALL ROS
-sudo sh rosscript.sh
+chmod +x  rosscript
+bash rosscript
 
 ###################### INSTALL GRID_MAP PACKAGES
 sudo apt-get install ros-kinetic-octomap*
