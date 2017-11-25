@@ -70,6 +70,13 @@ sudo apt-get update
 sudo apt-get install spotify-client
 
 
+##################### INSTALL VLC
+sudo apt-get update
+sudo apt-get install vlc browser-plugin-vlc
+
+
+
+
 ###################### CODE TO BE ADDED TO ~/.bashrc
 echo 'source ~/Dropbox/devel/setup.bash' >> ~/.bashrc
 echo 'export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:/home/asblab/Dropbox/src/jaguar_gazebo/worlds/models' >> ~/.bashrc
