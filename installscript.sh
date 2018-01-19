@@ -82,6 +82,11 @@ sudo apt install adobereader-enu
 sudo add-apt-repository -r "deb http://archive.canonical.com/ precise partner"
 sudo apt update
 
+
+##################### INSTALL DROPBOX
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+~/.dropbox-dist/dropboxd
+
 ###################### CODE TO BE ADDED TO ~/.bashrc
 echo 'source ~/Dropbox/devel/setup.bash' >> ~/.bashrc
 echo 'export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:/home/asblab/Dropbox/src/jaguar_gazebo/worlds/models' >> ~/.bashrc
